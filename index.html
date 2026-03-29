@@ -78,6 +78,39 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
 </div>
+    <!-- ΕΝΟΤΗΤΑ ΠΟΙΟΙ ΕΙΜΑΣΤΕ -->
+<section id="about-us" class="py-5 bg-white">
+    <div class="container text-center">
+        <h2 class="fw-bold" style="color: #003366;" data-i18n="about_us_title">Ποιοι Είμαστε</h2>
+        <hr class="mx-auto" style="width: 80px; height: 4px; background-color: #ff6600; border: none; opacity: 1;">
+        
+        <div class="row mt-4">
+            <div class="col-lg-10 mx-auto">
+                <p class="fs-5 text-dark mb-4" data-i18n="about_us_description">
+                    Η <strong>DIGECOMM IKE</strong> καθοδηγείται από τον <strong>Γιώργο Γκόλια</strong>, ένα στέλεχος με μακρά διαδρομή σε θέσεις ευθύνης σε μεγάλους οργανισμούς. Με ακαδημαϊκό υπόβαθρο στα Μαθηματικά και MBA, ο Γιώργος φέρνει στην εταιρεία μια στρατηγική ματιά που συνδυάζει την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.
+                </p>
+                <div class="row g-4 text-start">
+                    <div class="col-md-6">
+                        <div class="p-3 border-start border-4 border-warning bg-light h-100">
+                            <h5 class="fw-bold" style="color: #003366;" data-i18n="social_vision_title">Κοινωνικό Όραμα</h5>
+                            <p class="small mb-0" data-i18n="social_vision_text">
+                                Από το 2023, είναι Ιδρυτής της ΑΜΚΕ <strong>«Α όπως Αγάπη»</strong>, συνεχίζοντας μια πολυετή πορεία στον εθελοντισμό και την κοινωνική προσφορά.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 border-start border-4 border-warning bg-light h-100">
+                            <h5 class="fw-bold" style="color: #003366;" data-i18n="inclusive_comm_title">Συμπερίληψη</h5>
+                            <p class="small mb-0" data-i18n="inclusive_comm_text">
+                                Η επικοινωνία μας είναι προσβάσιμη σε όλους: Ο Γιώργος μιλά την <strong>Ελληνική Νοηματική Γλώσσα (ΕΝΓ)</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <section id="contact-form-section" class="py-5 bg-white">
     <div class="container">
         <div class="row justify-content-center">
@@ -245,11 +278,14 @@
 </section>
 
 <footer class="py-5 bg-dark text-white text-center">
-    <div class="container">
-        <p>📍 <span data-i18n="footer_address">Συντ. Δαβάκη 58, Καλλιθέα</span> | 📧 info@digecomm.gr | 📞 <span id="footer-phone">+30 694 898 5340</span></p>
-        <hr style="background: white;">
-        <p class="mb-0" data-i18n="copyright">&copy; 2026 DIGECOMM IKE</p>
-    </div>
+<div class="container">
+    <p>📍 <span data-i18n="footer_address">Συντ. Δαβάκη 58, Καλλιθέα</span> | 📧 info@digecomm.gr | 📞 +30 694 898 5340</p>
+    <p class="small text-secondary mb-0">
+        <strong>ΑΦΜ:</strong> 802954493 | <strong>Αρ. ΓΕΜΗ:</strong> 987654321000 | <strong>DIGECOMM IKE</strong>
+    </p>
+    <hr style="background: white; opacity: 0.2;">
+    <p class="mb-0 small" data-i18n="copyright">&copy; 2026 DIGECOMM IKE</p>
+</div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -299,7 +335,13 @@ const translations = {
         "form_email": "Email",
         "form_subject": "Θέμα",
         "form_message": "Μήνυμα",
-        "form_button": "Αποστολή Μηνύματος"
+        "form_button": "Αποστολή Μηνύματος",
+        "about_us_title": "Ποιοι Είμαστε",
+        "about_us_description": "Η DIGECOMM IKE καθοδηγείται από τον Γιώργο Γκόλια, ένα στέλεχος με μακρά διαδρομή σε θέσεις ευθύνης. Με υπόβαθρο στα Μαθηματικά και MBA, ο Γιώργος συνδυάζει την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.",
+        "social_vision_title": "Κοινωνικό Όραμα",
+        "social_vision_text": "Από το 2023, είναι Ιδρυτής της ΑΜΚΕ «Α όπως Αγάπη», συνεχίζοντας μια πολυετή πορεία στον εθελοντισμό.",
+        "inclusive_comm_title": "Συμπερίληψη",
+        "inclusive_comm_text": "Ο Γιώργος μιλά την Ελληνική Νοηματική Γλώσσα (ΕΝΓ), διασφαλίζοντας την πρόσβαση σε όλους."
     },
     en: {
         "page_title": "DIGECOMM IKE | Technical Services",
@@ -345,7 +387,13 @@ const translations = {
         "form_email": "Email",
         "form_subject": "Subject",
         "form_message": "Message",
-        "form_button": "Send Message"
+        "form_button": "Send Message",
+        "about_us_title": "About Us",
+        "about_us_description": "DIGECOMM IKE is led by George Golias, an executive with an extensive career in leadership roles. With a background in Mathematics and an MBA, George combines technical precision with a human-centric approach.",
+        "social_vision_title": "Social Vision",
+        "social_vision_text": "Since 2023, Founder of the NGO 'A for Agapi', following years of dedicated volunteer work.",
+        "inclusive_comm_title": "Inclusion",
+        "inclusive_comm_text": "George is fluent in Greek Sign Language (GSL), ensuring our services are accessible to everyone."
     },
     tr: {
         "page_title": "DIGECOMM IKE | Teknik Hizmetler",
@@ -391,7 +439,13 @@ const translations = {
         "form_email": "E-posta",
         "form_subject": "Konu",
         "form_message": "Mesaj",
-        "form_button": "Mesaj Gönder"
+        "form_button": "Mesaj Gönder",
+        "about_us_title": "Biz Kimiz",
+        "about_us_description": "DIGECOMM IKE, liderlik rollerinde geniş bir kariyere sahip bir yönetici olan George Golias tarafından yönetilmektedir. Matematik geçmişi και MBA derecesi ile George, teknik hassasiyeti insan odaklı bir yaklaşımla birleştiriyor.",
+        "social_vision_title": "Sosyal Vizyon",
+        "social_vision_text": "2023'ten beri, yıllarca süren özel gönüllü çalışmaların ardından 'A for Agapi' STK'sının Kurucusudur.",
+        "inclusive_comm_title": "Kapsayıcılık",
+        "inclusive_comm_text": "George, Yunan İşaret Dili (GSL) bilmektedir ve hizmetlerimizin herkes için erişilebilir olmasını sağlamaktadır."
     }
 };
 

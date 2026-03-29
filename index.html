@@ -394,10 +394,11 @@ function setLanguage(lang) {
     navPhone.href = 'tel:' + cleanPhone;
     
     // Update Hero Contact Button
+// Update Hero Contact Button
 const heroBtn = document.getElementById('hero-contact-btn');
 if (heroBtn) { 
     heroBtn.href = 'tel:' + cleanPhone;
-}    
+}
     // Update Contact Section Phone
     const contactPhone = document.getElementById('contact-phone');
     contactPhone.textContent = phoneNumber;
@@ -414,12 +415,17 @@ if (heroBtn) {
         }
     });
 }
-    // Ενεργοποίηση του Carousel
-document.addEventListener('DOMContentLoaded', function() {
-    const myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
-        interval: 5000,
-        ride: 'carousel'
-    });
+// Ενεργοποίηση του Carousel
+window.addEventListener('load', function() {
+    const carouselEl = document.getElementById('heroCarousel');
+    if (carouselEl && typeof bootstrap !== 'undefined') {
+        const carousel = new bootstrap.Carousel(carouselEl, {
+            interval: 5000,
+            ride: 'carousel',
+            pause: false
+        });
+        carousel.cycle();
+    }
 });
 </script>
 

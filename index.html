@@ -301,7 +301,13 @@ const translations = {
         "email": "info@digecomm.gr",
         "footer_address": "Συντ. Δαβάκη 58, Καλλιθέα",
         "copyright": "&copy; 2026 DIGECOMM IKE",
-        "phone": "+30 694 898 5340"
+        "phone": "+30 694 898 5340",
+        "contact_title": "Επικοινωνήστε μαζί μας",
+        "form_name": "Ονοματεπώνυμο",
+        "form_email": "Email",
+        "form_subject": "Θέμα",
+        "form_message": "Μήνυμα",
+        "form_button": "Αποστολή Μηνύματος"
     },
     en: {
         "page_title": "DIGECOMM IKE | Technical Services",
@@ -400,7 +406,36 @@ const translations = {
         "form_button": "Mesaj Gönder"
     }
 };
+function updateContent(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerHTML = translations[lang][key];
+            }
+        }
+    });
 
+    // Ενημέρωση τηλεφώνου στα κουμπιά (για τα Τούρκικα)
+    const phone = translations[lang].phone;
+    const cleanPhone = phone.replace(/\s+/g, '');
+    document.querySelectorAll('.hero-btn-phone').forEach(btn => {
+        btn.href = 'tel:' + cleanPhone;
+    });
+
+    // Ενημέρωση τίτλου σελίδας
+    document.title = translations[lang].page_title;
+    
+    // Ενημέρωση ενεργού κουμπιού γλώσσας
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+}
 let currentLanguage = 'el';
 
 // Initialize language selector

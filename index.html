@@ -30,7 +30,7 @@
                 <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="tr">TR</button>
             </div>
-            <a href="tel:6948985340" class="fw-bold text-decoration-none ms-4" style="color: #003366; font-size: 1.6rem;">
+            <a href="tel:6948985340" id="nav-phone" class="fw-bold text-decoration-none ms-4" style="color: #003366; font-size: 1.6rem;">
                 📞 6948985340
             </a>
         </div>
@@ -42,7 +42,7 @@
         <h1 class="display-3 fw-bold mb-3">DIGECOMM IKE</h1>
         <p class="lead fs-2 mb-4" data-i18n="hero_tagline">Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες</p>
         <div class="d-grid gap-2 d-md-block">
-            <a href="tel:6948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+            <a href="tel:6948985340" id="hero-contact-btn" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
         </div>
     </div>
 </header>
@@ -173,7 +173,7 @@
                 <div class="p-4 rounded shadow-lg" style="background: #003366; color: white;">
                     <h4 class="mb-4" style="color: #ffcc00;" data-i18n="contact_details_title">Στοιχεία Επικοινωνίας</h4>
                     <p class="mb-2">📍 <span data-i18n="address">Συντ. Δαβάκη 58, Καλλιθέα, 176 72</span></p>
-                    <p class="mb-2">📞 <a href="tel:6948985340" class="text-white text-decoration-none">6948985340</a></p>
+                    <p class="mb-2">📞 <a href="tel:6948985340" id="contact-phone" class="text-white text-decoration-none">6948985340</a></p>
                     <p class="mb-0">📧 <a href="mailto:info@digecomm.gr" class="text-white text-decoration-none" data-i18n="email">info@digecomm.gr</a></p>
                 </div>
             </div>
@@ -183,7 +183,7 @@
 
 <footer class="py-5 bg-dark text-white text-center">
     <div class="container">
-        <p>📍 <span data-i18n="footer_address">Συντ. Δαβάκη 58, Καλλιθέα</span> | 📧 info@digecomm.gr | 📞 6948985340</p>
+        <p>📍 <span data-i18n="footer_address">Συντ. Δαβάκη 58, Καλλιθέα</span> | 📧 info@digecomm.gr | 📞 <span id="footer-phone">6948985340</span></p>
         <hr style="background: white;">
         <p class="mb-0" data-i18n="copyright">&copy; 2026 DIGECOMM IKE</p>
     </div>
@@ -229,7 +229,8 @@ const translations = {
         "address": "Συντ. Δαβάκη 58, Καλλιθέα, 176 72",
         "email": "info@digecomm.gr",
         "footer_address": "Συντ. Δαβάκη 58, Καλλιθέα",
-        "copyright": "&copy; 2026 DIGECOMM IKE"
+        "copyright": "&copy; 2026 DIGECOMM IKE",
+        "phone": "6948985340"
     },
     en: {
         "page_title": "DIGECOMM IKE | Technical Services",
@@ -268,7 +269,8 @@ const translations = {
         "address": "Synt. Davaki 58, Kallithea, 176 72",
         "email": "info@digecomm.gr",
         "footer_address": "Synt. Davaki 58, Kallithea",
-        "copyright": "&copy; 2026 DIGECOMM IKE"
+        "copyright": "&copy; 2026 DIGECOMM IKE",
+        "phone": "6948985340"
     },
     tr: {
         "page_title": "DIGECOMM IKE | Teknik Hizmetler",
@@ -307,7 +309,8 @@ const translations = {
         "address": "Synt. Davaki 58, Kallithea, 176 72",
         "email": "info@digecomm.gr",
         "footer_address": "Synt. Davaki 58, Kallithea",
-        "copyright": "&copy; 2026 DIGECOMM IKE"
+        "copyright": "&copy; 2026 DIGECOMM IKE",
+        "phone": "+30 693 306 1106"
     }
 };
 
@@ -343,6 +346,27 @@ function setLanguage(lang) {
             element.textContent = translations[lang][key];
         }
     });
+    
+    // Update Phone Numbers dynamically
+    const phoneNumber = translations[lang]['phone'];
+    const cleanPhone = phoneNumber.replace(/\s/g, ''); // Remove spaces for tel: link
+    
+    // Update Nav Phone
+    const navPhone = document.getElementById('nav-phone');
+    navPhone.textContent = '📞 ' + phoneNumber;
+    navPhone.href = 'tel:' + cleanPhone;
+    
+    // Update Hero Contact Button
+    const heroBtn = document.getElementById('hero-contact-btn');
+    heroBtn.href = 'tel:' + cleanPhone;
+    
+    // Update Contact Section Phone
+    const contactPhone = document.getElementById('contact-phone');
+    contactPhone.textContent = phoneNumber;
+    contactPhone.href = 'tel:' + cleanPhone;
+    
+    // Update Footer Phone
+    document.getElementById('footer-phone').textContent = phoneNumber;
     
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {

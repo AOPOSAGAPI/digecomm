@@ -37,16 +37,48 @@
     </div>
 </nav>
 
-<header class="hero-section text-white text-center py-5" style="background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 500px; display: flex; align-items: center;">
-    <div class="container">
-        <h1 class="display-3 fw-bold mb-3">DIGECOMM IKE</h1>
-        <p class="lead fs-2 mb-4" data-i18n="hero_tagline">Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες</p>
-        <div class="d-grid gap-2 d-md-block">
-            <a href="tel:+30 694 898 5340" id="hero-contact-btn" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        
+        <div class="carousel-item active" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 550px;">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white" style="min-height: 550px;">
+                <div>
+                    <h1 class="display-3 fw-bold mb-3">DIGECOMM IKE</h1>
+                    <p class="lead fs-2 mb-4" data-i18n="hero_tagline_tech">Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες</p>
+                    <a href="tel:+306948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                </div>
+            </div>
         </div>
-    </div>
-</header>
 
+        <div class="carousel-item" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1521791136364-798a7bc0d262?q=80&w=2069&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 550px;">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white" style="min-height: 550px;">
+                <div>
+                    <h2 class="display-3 fw-bold mb-3">Business Support</h2>
+                    <p class="lead fs-2 mb-4" data-i18n="hero_tagline_business">Εξειδικευμένο προσωπικό για την υποστήριξη των διαδικασιών σας</p>
+                    <a href="tel:+306948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1581578731522-6b8daa7d288b?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 550px;">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white" style="min-height: 550px;">
+                <div>
+                    <h2 class="display-3 fw-bold mb-3">Facility Management</h2>
+                    <p class="lead fs-2 mb-4" data-i18n="hero_tagline_facility">Έμφαση στη λεπτομέρεια και υψηλή παραγωγικότητα με προσήλωση στο παραδοτέο</p>
+                    <a href="tel:+306948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>
 <section class="py-5 bg-light">
     <div class="container text-center">
         <h2 class="section-title text-uppercase" data-i18n="our_services_title">Οι Υπηρεσίες μας</h2>
@@ -194,7 +226,9 @@
 const translations = {
     el: {
         "page_title": "DIGECOMM IKE | Τεχνικές Υπηρεσίες",
-        "hero_tagline": "Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες",
+        "hero_tagline_tech": "Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες",
+        "hero_tagline_business": "Εξειδικευμένο προσωπικό για την υποστήριξη των διαδικασιών σας",
+        "hero_tagline_facility": "Έμφαση στη λεπτομέρεια και υψηλή παραγωγικότητα με προσήλωση στο παραδοτέο",
         "contact_button": "ΕΠΙΚΟΙΝΩΝΙΑ",
         "our_services_title": "Οι Υπηρεσίες μας",
         "technical_projects_title": "Τεχνικά Έργα",
@@ -234,7 +268,9 @@ const translations = {
     },
     en: {
         "page_title": "DIGECOMM IKE | Technical Services",
-        "hero_tagline": "Innovation & Reliability in Technical Services",
+        "hero_tagline_tech": "Innovation & Reliability in Technical Services",
+        "hero_tagline_business": "Specialized personnel for your business process support",
+        "hero_tagline_facility": "Focus on detail and high productivity with commitment to the result",       
         "contact_button": "CONTACT",
         "our_services_title": "Our Services",
         "technical_projects_title": "Technical Projects",
@@ -274,7 +310,9 @@ const translations = {
     },
     tr: {
         "page_title": "DIGECOMM IKE | Teknik Hizmetler",
-        "hero_tagline": "Teknik Hizmetlerde Yenilik ve Güvenilirlik",
+        "hero_tagline_tech": "Teknik Hizmetlerde Yenilik ve Güvenilirlik",
+        "hero_tagline_business": "Süreçlerinizin desteklenmesi için uzman personel",
+        "hero_tagline_facility": "Detaylara odaklanma, yüksek verimlilik και sonuç odaklılık",        
         "contact_button": "İLETİŞİM",
         "our_services_title": "Hizmetlerimiz",
         "technical_projects_title": "Teknik Projeler",
@@ -376,6 +414,13 @@ function setLanguage(lang) {
         }
     });
 }
+    // Ενεργοποίηση του Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+        interval: 5000,
+        ride: 'carousel'
+    });
+});
 </script>
 
 </body>

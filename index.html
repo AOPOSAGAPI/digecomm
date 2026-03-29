@@ -394,9 +394,10 @@ function setLanguage(lang) {
     navPhone.href = 'tel:' + cleanPhone;
     
     // Update Hero Contact Button
-    const heroBtn = document.getElementById('hero-contact-btn');
+const heroBtn = document.getElementById('hero-contact-btn');
+if (heroBtn) { 
     heroBtn.href = 'tel:' + cleanPhone;
-    
+}    
     // Update Contact Section Phone
     const contactPhone = document.getElementById('contact-phone');
     contactPhone.textContent = phoneNumber;

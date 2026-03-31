@@ -6,132 +6,56 @@
     <title id="page-title">DIGECOMM IKE | Τεχνικές Υπηρεσίες</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root { 
-            --main-blue: #003366; 
-            --accent-orange: #ff6600; 
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .navbar { 
-            background: white !important; 
-            border-bottom: 3px solid var(--main-blue); 
-            padding: 15px 0; 
-        }
-        .hero-carousel-item { 
-            height: 650px; 
-            background-size: cover; 
-            background-position: center; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .lang-btn { 
-            background: none; 
-            border: 2px solid var(--main-blue); 
-            color: var(--main-blue); 
-            padding: 8px 15px; 
-            margin: 0 5px; 
-            cursor: pointer; 
-            font-weight: bold; 
-            border-radius: 5px; 
-            transition: 0.3s;
-        }
-        .lang-btn.active { 
-            background: var(--main-blue); 
-            color: white; 
-        }
-        .lang-btn:hover {
-            background: #e6f0ff;
-        }
-        .video-container-main { 
-            position: relative; 
-            padding-bottom: 177.77%; 
-            height: 0; 
-            overflow: hidden; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
-            width: 280px; 
-            margin: 0 auto; 
-        }
-        .video-container-main iframe { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            border: 0; 
-        }
-        .video-box-grid { 
-            position: relative; 
-            padding-bottom: 177.77%; 
-            height: 0; 
-            overflow: hidden; 
-            border-radius: 12px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
-            background: #000;
-        }
-        .video-box-grid iframe { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            border: 0; 
-        }
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 40px 0;
-        }
+        :root { --main-blue: #003366; --accent-orange: #ff6600; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background: white !important; border-bottom: 3px solid var(--main-blue); padding: 10px 0; }
+        .carousel-item { height: 600px; background-size: cover; background-position: center; }
+        .lang-btn { background: none; border: 2px solid var(--main-blue); color: var(--main-blue); padding: 8px 12px; margin: 0 5px; cursor: pointer; font-weight: bold; border-radius: 5px; }
+        .lang-btn.active { background: var(--main-blue); color: white; }
+        .video-container { position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); width: 260px; margin: 0 auto; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .video-box-small { position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: #000; }
+        .video-box-small iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .footer { background: #1a1a1a; color: white; padding: 40px 0; }
     </style>
 </head>
 <body>
 
 <nav class="navbar sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="#">
-            <img src="digecomm logo transparent.png" alt="DIGECOMM" style="height: 110px;">
-        </a>
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="DIGECOMM" style="height: 100px;"></a>
         <div class="d-flex align-items-center">
             <div class="lang-selector">
                 <button class="lang-btn active" data-lang="el">ΕΛ</button>
                 <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="tr">TR</button>
             </div>
-            <a href="tel:+306948985340" class="fw-bold text-decoration-none ms-4" style="color: #003366; font-size: 1.5rem;">📞 +30 694 898 5340</a>
+            <a href="tel:+306948985340" class="fw-bold text-decoration-none ms-4" style="color: #003366; font-size: 1.4rem;">📞 +30 694 898 5340</a>
         </div>
     </div>
 </nav>
 
 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('technical.jpg');">
-            <div class="hero-carousel-item text-center text-white container">
+        <div class="carousel-item active" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('1.jpg');">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
                 <div>
-                    <h1 class="display-2 fw-bold mb-3">DIGECOMM IKE</h1>
+                    <h1 class="display-3 fw-bold mb-3">DIGECOMM IKE</h1>
                     <p class="lead fs-2 mb-4" data-i18n="hero_tagline_tech">Τεχνικές Υπηρεσίες & Ανακαινίσεις</p>
                     <a href="#contact" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                 </div>
             </div>
         </div>
-        <div class="carousel-item" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('call_center.jpg');">
-            <div class="hero-carousel-item text-center text-white container">
+        <div class="carousel-item" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('2.jpg');">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
                 <div>
                     <h2 class="display-3 fw-bold mb-3">Business Support</h2>
                     <p class="lead fs-2 mb-4" data-i18n="hero_tagline_business">Υποστήριξη Επιχειρησιακών Διαδικασιών</p>
                 </div>
             </div>
         </div>
-        <div class="carousel-item" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('cleaner.jpg');">
-            <div class="hero-carousel-item text-center text-white container">
+        <div class="carousel-item" style="background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), url('3.jpg');">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
                 <div>
                     <h2 class="display-3 fw-bold mb-3">Facility Management</h2>
                     <p class="lead fs-2 mb-4" data-i18n="hero_tagline_facility">Ολοκληρωμένη Διαχείριση Εγκαταστάσεων</p>
@@ -145,25 +69,25 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 mb-4 text-center">
-                <img src="metal-stairs.jpg" class="img-fluid rounded shadow-lg" alt="George Golias">
+                <img src="bio.jpg" class="img-fluid rounded shadow-lg" alt="Bio">
             </div>
             <div class="col-lg-7 ps-lg-5">
-                <h2 class="fw-bold mb-3" style="color: #003366;" data-i18n="about_us_title">Ποιοι Είμαστε</h2>
-                <hr style="width: 80px; height: 4px; background-color: #ff6600; border: none; opacity: 1; margin-bottom: 30px;">
-                <p class="fs-5 text-dark mb-4" data-i18n="about_us_description">
-                    Η <strong>DIGECOMM IKE</strong> καθοδηγείται από τον <strong>Γιώργο Γκόλια</strong>, ένα στέλεχος με μακρά διαδρομή σε θέσεις ευθύνης σε μεγάλους οργανισμούς. Με ακαδημαϊκό υπόβαθρο στα Μαθηματικά και MBA, ο Γιώργος φέρνει στην εταιρεία μια στρατηγική ματιά που συνδυάζει την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.
+                <h2 class="fw-bold" style="color: #003366;" data-i18n="about_us_title">Ποιοι Είμαστε</h2>
+                <hr style="width: 80px; height: 4px; background-color: #ff6600; border: none; opacity: 1;">
+                <p class="fs-5 text-dark mt-4" data-i18n="about_us_description">
+                    Η <strong>DIGECOMM IKE</strong> καθοδηγείται από τον <strong>Γιώργο Γκόλια</strong>. Με υπόβαθρο στα Μαθηματικά και MBA, ο Γιώργος συνδυάζει την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση, διασφαλίζοντας ποιότητα και συνέπεια σε κάθε έργο.
                 </p>
-                <div class="row g-4">
+                <div class="row g-3 mt-4">
                     <div class="col-md-6">
-                        <div class="p-4 border-start border-4 border-warning bg-light h-100 shadow-sm">
-                            <h5 class="fw-bold" style="color: #003366;" data-i18n="social_vision_title">Κοινωνικό Όραμα</h5>
-                            <p class="mb-0" data-i18n="social_vision_text">Από το 2023, είναι Ιδρυτής της ΑΜΚΕ <strong>«Α όπως Αγάπη»</strong>, συνεχίζοντας μια πολυετή πορεία στον εθελοντισμό και την προσφορά.</p>
+                        <div class="p-3 border-start border-4 border-warning bg-light h-100">
+                            <h6 class="fw-bold" style="color: #003366;" data-i18n="social_vision_title">Κοινωνικό Όραμα</h6>
+                            <p class="small mb-0" data-i18n="social_vision_text">Ιδρυτής της ΑΜΚΕ «Α όπως Αγάπη», με πολυετή πορεία στον εθελοντισμό.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="p-4 border-start border-4 border-warning bg-light h-100 shadow-sm">
-                            <h5 class="fw-bold" style="color: #003366;" data-i18n="inclusive_comm_title">Συμπερίληψη</h5>
-                            <p class="mb-0" data-i18n="inclusive_comm_text">Η επικοινωνία μας είναι προσβάσιμη σε όλους: Ο Γιώργος μιλά την <strong>Ελληνική Νοηματική Γλώσσας (ΕΝΓ)</strong>.</p>
+                        <div class="p-3 border-start border-4 border-warning bg-light h-100">
+                            <h6 class="fw-bold" style="color: #003366;" data-i18n="inclusive_comm_title">Συμπερίληψη</h6>
+                            <p class="small mb-0" data-i18n="inclusive_comm_text">Γνώστης της Ελληνικής Νοηματικής Γλώσσας (ΕΝΓ), για επικοινωνία χωρίς φραγμούς.</p>
                         </div>
                     </div>
                 </div>
@@ -172,34 +96,33 @@
     </div>
 </section>
 
-<section id="projects" class="py-5 bg-light">
+<section id="loft-project" class="py-5 bg-light">
     <div class="container">
-        <div class="project-card p-4 p-lg-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="kitchen-stairs.jpg" alt="Loft Project" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-lg-6 ps-lg-5">
-                    <h2 class="fw-bold mb-4" style="color: #003366;" data-i18n="loft_renovation_title">Ολική Ανακατασκευή Loft (AirBnb)</h2>
-                    <p class="text-muted fs-5 mb-4" data-i18n="loft_renovation_description">Μετατρέψαμε έναν παλιό και εγκαταλελειμμένο χώρο σε ένα σύγχρονο, λειτουργικό κατάλυμα υψηλών προδιαγραφών. Αναλάβαμε όλο το φάσμα των εργασιών: από τα υδραυλικά και ηλεκτρολογικά, μέχρι τις ειδικές μεταλλικές κατασκευές και τη διακόσμηση.</p>
-                    
-                    <h5 class="fw-bold mb-3" style="color: #003366;" data-i18n="project_evolution_video">Δείτε την Εξέλιξη του Έργου:</h5>
-                    <div class="row g-3">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <img src="loft.jpg" alt="Loft" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6 mb-4 px-lg-5">
+                <h2 class="fw-bold mb-3" style="color: #003366;" data-i18n="loft_renovation_title">Ολική Ανακατασκευή Loft (AirBnb)</h2>
+                <p class="text-muted fs-5" data-i18n="loft_renovation_description">Μετατρέψαμε έναν παλιό χώρο σε ένα σύγχρονο κατάλυμα. Αναλάβαμε όλο το φάσμα των εργασιών.</p>
+                <div class="mt-4">
+                    <h5 class="fw-bold mb-3" style="color: #003366;" data-i18n="project_evolution_video">Η Εξέλιξη του Έργου:</h5>
+                    <div class="row g-2">
                         <div class="col-3">
-                            <div class="video-box-grid"><iframe src="https://www.youtube.com/embed/eWGEiKyXQyw" allowfullscreen></iframe></div>
-                            <p class="small text-center fw-bold mt-2" data-i18n="before">1. Πριν</p>
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/eWGEiKyXQyw"></iframe></div>
+                            <p class="small text-center mt-1" data-i18n="before">Πριν</p>
                         </div>
                         <div class="col-3">
-                            <div class="video-box-grid"><iframe src="https://www.youtube.com/embed/wlCMACHGf6k" allowfullscreen></iframe></div>
-                            <p class="small text-center fw-bold mt-2" data-i18n="works">2. Εργασίες 1</p>
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/wlCMACHGf6k"></iframe></div>
+                            <p class="small text-center mt-1" data-i18n="works">Εργασίες 1</p>
                         </div>
                         <div class="col-3">
-                            <div class="video-box-grid"><iframe src="https://www.youtube.com/embed/nM0eA53KKos" allowfullscreen></iframe></div>
-                            <p class="small text-center fw-bold mt-2" data-i18n="works_2">3. Εργασίες 2</p>
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/nM0eA53KKos"></iframe></div>
+                            <p class="small text-center mt-1" data-i18n="works_2">Εργασίες 2</p>
                         </div>
                         <div class="col-3">
-                            <div class="video-box-grid"><iframe src="https://www.youtube.com/embed/cQKPYtPriaA" allowfullscreen></iframe></div>
-                            <p class="small text-center fw-bold text-success mt-2" data-i18n="after">4. Μετά</p>
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/cQKPYtPriaA"></iframe></div>
+                            <p class="small text-center mt-1 fw-bold text-success" data-i18n="after">Μετά</p>
                         </div>
                     </div>
                 </div>
@@ -211,16 +134,14 @@
 <section class="py-5 bg-white">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7 mb-4 mb-lg-0">
-                <div class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6" data-i18n="social_contribution_badge">Κοινωνική Προσφορά</div>
-                <h2 class="fw-bold mb-4" style="color: #003366;" data-i18n="stray_animal_care_title">Φροντίδα για τα Αδέσποτα</h2>
-                <p class="fs-5 mb-4" data-i18n="tzan_contribution">Ο συνεργάτης μας <strong>Τζαν</strong>, μοιραζόμενος τις αξίες της εταιρείας μας, ανέλαβε εθελοντικά την πλήρη ανακατασκευή και ηλεκτροσυγκόλληση της μεταλλικής σκάλας στο καταφύγιο αδέσποτων του Δήμου Αθηναίων.</p>
-                <div class="p-4 border-start border-5 border-primary bg-light italic-box">
-                    <p class="fst-italic fw-bold fs-4 mb-0" style="color: #003366;" data-i18n="our_work_is_our_art">"Η δουλειά μας είναι η τέχνη μας, και η προσφορά η ηθική μας υποχρέωση."</p>
-                </div>
+            <div class="col-lg-7">
+                <div class="badge bg-warning text-dark mb-2" data-i18n="social_contribution_badge">Κοινωνική Προσφορά</div>
+                <h2 class="fw-bold" style="color: #003366;" data-i18n="stray_animal_care_title">Φροντίδα για τα Αδέσποτα</h2>
+                <p class="fs-5" data-i18n="tzan_contribution">Ο <strong>Τζαν</strong> ανέλαβε εθελοντικά την πλήρη ανακατασκευή και ηλεκτροσυγκόλληση της μεταλλικής σκάλας στο καταφύγιο του Δήμου Αθηναίων.</p>
+                <p class="fst-italic fw-bold" style="color: #003366;" data-i18n="our_work_is_our_art">"Η δουλειά μας είναι η τέχνη μας, και η προσφορά η ηθική μας υποχρέωση."</p>
             </div>
             <div class="col-lg-5">
-                <div class="video-container-main">
+                <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/pdwip7B1qp4" allowfullscreen></iframe>
                 </div>
             </div>
@@ -232,26 +153,24 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card shadow-lg border-0 p-4 p-lg-5">
-                    <h2 class="text-center mb-5 fw-bold" data-i18n="contact_title" style="color: #003366;">Επικοινωνήστε μαζί μας</h2>
+                <div class="card shadow-lg border-0 p-4">
+                    <h2 class="text-center mb-4" data-i18n="contact_title" style="color: #003366;">Επικοινωνήστε μαζί μας</h2>
                     <form action="https://formspree.io/f/mjgpyedo" method="POST">
-                        <div class="row g-4">
-                            <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
                                 <label class="form-label fw-bold" data-i18n="form_name">Ονοματεπώνυμο</label>
-                                <input type="text" name="name" class="form-control form-control-lg" required>
+                                <input type="text" name="name" class="form-control" required>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <label class="form-label fw-bold" data-i18n="form_email">Email</label>
-                                <input type="email" name="_replyto" class="form-control form-control-lg" required>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-bold" data-i18n="form_message">Το Μήνυμά σας</label>
-                                <textarea name="message" class="form-control form-control-lg" rows="5" required></textarea>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold shadow py-3" data-i18n="form_button">ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</button>
+                                <input type="email" name="_replyto" class="form-control" required>
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold" data-i18n="form_message">Μήνυμα</label>
+                            <textarea name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold shadow-sm" data-i18n="form_button">ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</button>
                     </form>
                 </div>
             </div>
@@ -259,13 +178,10 @@
     </div>
 </section>
 
-<footer class="text-center">
+<footer class="footer text-center">
     <div class="container">
-        <h4 class="fw-bold mb-4">DIGECOMM IKE</h4>
-        <p class="fs-5 mb-2">📍 Συνταγματάρχου Δαβάκη 58, Καλλιθέα, Τ.Κ. 176 72</p>
-        <p class="fs-5 mb-4">📞 +30 694 898 5340 | ✉️ info@digecomm.gr</p>
-        <hr class="bg-secondary mx-auto" style="width: 50%;">
-        <p class="small text-secondary mt-4">&copy; 2026 DIGECOMM IKE | ΑΦΜ: 802954493 | ΔΟΥ: ΚΑΛΛΙΘΕΑΣ</p>
+        <p class="mb-1">📍 Συντ. Δαβάκη 58, Καλλιθέα | 📞 +30 694 898 5340</p>
+        <p class="small text-secondary">&copy; 2026 DIGECOMM IKE | ΑΦΜ: 802954493</p>
     </div>
 </footer>
 
@@ -273,97 +189,38 @@
 <script>
 const translations = {
     el: {
-        "hero_tagline_tech": "Τεχνικές Υπηρεσίες & Ανακαινίσεις",
-        "hero_tagline_business": "Υποστήριξη Επιχειρησιακών Διαδικασιών",
-        "hero_tagline_facility": "Ολοκληρωμένη Διαχείριση Εγκαταστάσεων",
-        "contact_button": "ΕΠΙΚΟΙΝΩΝΙΑ",
-        "about_us_title": "Ποιοι Είμαστε",
-        "about_us_description": "Η DIGECOMM IKE καθοδηγείται από τον Γιώργο Γκόλια, ένα στέλεχος με μακρά διαδρομή σε θέσεις ευθύνης σε μεγάλους οργανισμούς. Με ακαδημαϊκό υπόβαθρο στα Μαθηματικά και MBA, ο Γιώργος φέρνει στην εταιρεία μια στρατηγική ματιά που συνδυάζει την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.",
-        "social_vision_title": "Κοινωνικό Όραμα",
-        "social_vision_text": "Από το 2023, είναι Ιδρυτής της ΑΜΚΕ «Α όπως Αγάπη», συνεχίζοντας μια πολυετή πορεία στον εθελοντισμό και την προσφορά.",
-        "inclusive_comm_title": "Συμπερίληψη",
-        "inclusive_comm_text": "Η επικοινωνία μας είναι προσβάσιμη σε όλους: Ο Γιώργος μιλά την Ελληνική Νοηματική Γλώσσας (ΕΝΓ).",
-        "loft_renovation_title": "Ολική Ανακατασκευή Loft (AirBnb)",
-        "loft_renovation_description": "Μετατρέψαμε έναν παλιό και εγκαταλελειμμένο χώρο σε ένα σύγχρονο, λειτουργικό κατάλυμα υψηλών προδιαγραφών. Αναλάβαμε όλο το φάσμα των εργασιών: από τα υδραυλικά και ηλεκτρολογικά, μέχρι τις ειδικές μεταλλικές κατασκευές και τη διακόσμηση.",
-        "project_evolution_video": "Δείτε την Εξέλιξη του Έργου:",
-        "before": "1. Πριν",
-        "works": "2. Εργασίες 1",
-        "works_2": "3. Εργασίες 2",
-        "after": "4. Μετά",
-        "social_contribution_badge": "Κοινωνική Προσφορά",
-        "stray_animal_care_title": "Φροντίδα για τα Αδέσποτα",
-        "tzan_contribution": "Ο συνεργάτης μας Τζαν, μοιραζόμενος τις αξίες της εταιρείας μας, ανέλαβε εθελοντικά την πλήρη ανακατασκευή και ηλεκτροσυγκόλληση της μεταλλικής σκάλας στο καταφύγιο αδέσποτων του Δήμου Αθηναίων.",
-        "our_work_is_our_art": "Η δουλειά μας είναι η τέχνη μας, και η προσφορά η ηθική μας υποχρέωση.",
-        "contact_title": "Επικοινωνήστε μαζί μας",
-        "form_name": "Ονοματεπώνυμο",
-        "form_email": "Email",
-        "form_message": "Το Μήνυμά σας",
-        "form_button": "ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ"
+        "hero_tagline_tech": "Τεχνικές Υπηρεσίες & Ανακαινίσεις", "hero_tagline_business": "Υποστήριξη Επιχειρησιακών Διαδικασιών", "hero_tagline_facility": "Ολοκληρωμένη Διαχείριση Εγκαταστάσεων", "contact_button": "ΕΠΙΚΟΙΝΩΝΙΑ",
+        "about_us_title": "Ποιοι Είμαστε", "about_us_description": "Η DIGECOMM IKE καθοδηγείται από τον Γιώργο Γκόλια. Με υπόβαθρο στα Μαθηματικά και MBA, ο Γιώργος συνδυάζει την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.",
+        "social_vision_title": "Κοινωνικό Όραμα", "social_vision_text": "Ιδρυτής της ΑΜΚΕ «Α όπως Αγάπη», με πολυετή πορεία στον εθελοντισμό.", "inclusive_comm_title": "Συμπερίληψη", "inclusive_comm_text": "Γνώστης της Ελληνικής Νοηματικής Γλώσσας (ΕΝΓ).",
+        "loft_renovation_title": "Ολική Ανακατασκευή Loft (AirBnb)", "loft_renovation_description": "Μετατρέψαμε έναν παλιό χώρο σε ένα σύγχρονο κατάλυμα.", "project_evolution_video": "Η Εξέλιξη του Έργου:",
+        "before": "Πριν", "works": "Εργασίες 1", "works_2": "Εργασίες 2", "after": "Μετά",
+        "stray_animal_care_title": "Φροντίδα για τα Αδέσποτα", "tzan_contribution": "Ο Τζαν ανέλαβε εθελοντικά την πλήρη ανακατασκευή της μεταλλικής σκάλας.", "our_work_is_our_art": "Η δουλειά μας είναι η τέχνη μας.",
+        "contact_title": "Επικοινωνήστε μαζί μας", "form_name": "Ονοματεπώνυμο", "form_email": "Email", "form_message": "Μήνυμα", "form_button": "ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ", "social_contribution_badge": "Κοινωνική Προσφορά"
     },
     en: {
-        "hero_tagline_tech": "Technical Services & Renovations",
-        "hero_tagline_business": "Business Process Support",
-        "hero_tagline_facility": "Integrated Facility Management",
-        "contact_button": "CONTACT US",
-        "about_us_title": "Who We Are",
-        "about_us_description": "DIGECOMM IKE is led by George Golias, an executive with a long career in leadership positions within large organizations. With a background in Mathematics and an MBA, George brings a strategic vision that combines technical precision with a human-centric approach.",
-        "social_vision_title": "Social Vision",
-        "social_vision_text": "Since 2023, he is the Founder of the NGO 'A for Agapi', continuing a long-standing journey in volunteering and social contribution.",
-        "inclusive_comm_title": "Inclusion",
-        "inclusive_comm_text": "Our communication is accessible to everyone: George is fluent in Greek Sign Language (GSL).",
-        "loft_renovation_title": "Total Loft Reconstruction (AirBnb)",
-        "loft_renovation_description": "We transformed an old and abandoned space into a modern, high-standard functional accommodation. We managed the entire project: from plumbing and electrical work to custom metal structures and interior design.",
-        "project_evolution_video": "Project Evolution:",
-        "before": "1. Before",
-        "works": "2. Works 1",
-        "works_2": "3. Works 2",
-        "after": "4. After",
-        "social_contribution_badge": "Social Contribution",
-        "stray_animal_care_title": "Stray Animal Care",
-        "tzan_contribution": "Our partner Tzan, sharing our company values, volunteered for the complete reconstruction and welding of the metal staircase at the City of Athens stray animal shelter.",
-        "our_work_is_our_art": "Our work is our art, and social contribution is our moral obligation.",
-        "contact_title": "Contact Us",
-        "form_name": "Full Name",
-        "form_email": "Email",
-        "form_message": "Your Message",
-        "form_button": "SEND MESSAGE"
+        "hero_tagline_tech": "Technical Services & Renovations", "hero_tagline_business": "Business Process Support", "hero_tagline_facility": "Facility Management", "contact_button": "CONTACT",
+        "about_us_title": "About Us", "about_us_description": "DIGECOMM IKE is led by George Golias, combining technical precision with a human-centric approach.",
+        "social_vision_title": "Social Vision", "social_vision_text": "Founder of 'A for Agapi' NGO, dedicated to social contribution.", "inclusive_comm_title": "Inclusion", "inclusive_comm_text": "Fluent in Greek Sign Language (GSL).",
+        "loft_renovation_title": "Total Loft Reconstruction (AirBnb)", "loft_renovation_description": "We transformed an old space into a modern apartment.", "project_evolution_video": "Project Evolution:",
+        "before": "Before", "works": "Work 1", "works_2": "Work 2", "after": "After",
+        "stray_animal_care_title": "Stray Animal Care", "tzan_contribution": "Tzan volunteered for the reconstruction of the metal staircase.", "our_work_is_our_art": "Our work is our art.",
+        "contact_title": "Contact Us", "form_name": "Full Name", "form_email": "Email", "form_message": "Message", "form_button": "Send Message", "social_contribution_badge": "Social Contribution"
     },
     tr: {
-        "hero_tagline_tech": "Teknik Hizmetler ve Yenileme",
-        "hero_tagline_business": "İş Süreçleri Desteği",
-        "hero_tagline_facility": "Entegre Tesis Yönetimi",
-        "contact_button": "İLETİŞİM",
-        "about_us_title": "Biz Kimiz",
-        "about_us_description": "DIGECOMM IKE, büyük organizasyonlarda uzun bir kariyere sahip olan George Golias tarafından yönetilmektedir. Matematik eğitimi ve MBA derecesiyle George, teknik hassasiyeti insan odaklı bir yaklaşımla birleştiren stratejik bir vizyon sunmaktadır.",
-        "social_vision_title": "Sosyal Vizyon",
-        "social_vision_text": "2023'ten beri, gönüllülük ve sosyal katkı yolculuğuna devam eden 'A for Agapi' Derneği'nin kurucusudur.",
-        "inclusive_comm_title": "Kapsayıcılık",
-        "inclusive_comm_text": "İletişimimiz herkes için erişilebilir: George, Yunan İşaret Dili'ni (GSL) akıcı bir şekilde konuşmaktadır.",
-        "loft_renovation_title": "Komple Loft Yenileme (AirBnb)",
-        "loft_renovation_description": "Eski ve terk edilmiş bir alanı modern, yüksek standartlı bir konaklama birimine dönüştürdük. Tesisat, elektrik ve özel metal yapılar dahil olmak üzere tüm süreci yönettik.",
-        "project_evolution_video": "Proje Gelişimi:",
-        "before": "1. Önce",
-        "works": "2. Çalışma 1",
-        "works_2": "3. Çalışma 2",
-        "after": "4. Sonra",
-        "social_contribution_badge": "Sosyal Katkı",
-        "stray_animal_care_title": "Sokak Hayvanları Bakımı",
-        "tzan_contribution": "Ortağımız Tzan, şirket değerlerimizi paylaşarak Atina Belediyesi sokak hayvanı barınağındaki metal merdivenin yeniden inşasını gönüllü olarak üstlendi.",
-        "our_work_is_our_art": "İşimiz sanatımız, sosyal katkı ise ahlaki görevimizdir.",
-        "contact_title": "Bize Ulaşın",
-        "form_name": "Ad Soyad",
-        "form_email": "E-posta",
-        "form_message": "Mesajınız",
-        "form_button": "MESAJ GÖNDER"
+        "hero_tagline_tech": "Teknik Hizmetler ve Yenileme", "hero_tagline_business": "İş Süreçleri Desteği", "hero_tagline_facility": "Tesis Yönetimi", "contact_button": "İLETİŞİM",
+        "about_us_title": "Biz Kimiz", "about_us_description": "DIGECOMM IKE, George Golias tarafından yönetilmektedir.",
+        "social_vision_title": "Sosyal Vizyon", "social_vision_text": "'A for Agapi' STK'sının kurucusu.", "inclusive_comm_title": "Kapsayıcılık", "inclusive_comm_text": "Yunan İşaret Dili (GSL) bilmektedir.",
+        "loft_renovation_title": "Komple Loft Yenileme (AirBnb)", "loft_renovation_description": "Eski bir alanı modern bir konaklama birimine dönüştürdük.", "project_evolution_video": "Proje Gelişimi:",
+        "before": "Önce", "works": "Çalışma 1", "works_2": "Çalışma 2", "after": "Sonra",
+        "stray_animal_care_title": "Hayvan Bakımı", "tzan_contribution": "Tzan, metal merdivenin rekonstrüksiyonu için gönüllü oldu.", "our_work_is_our_art": "İşimiz sanatımızdır.",
+        "contact_title": "Bize Ulaşın", "form_name": "Ad Soyad", "form_email": "E-posta", "form_message": "Mesaj", "form_button": "Mesaj Gönder", "social_contribution_badge": "Sosyal Katkı"
     }
 };
 
 function updateContent(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
-        }
+        if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
     });
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
@@ -371,9 +228,7 @@ function updateContent(lang) {
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        updateContent(this.getAttribute('data-lang'));
-    });
+    btn.addEventListener('click', function() { updateContent(this.getAttribute('data-lang')); });
 });
 </script>
 </body>

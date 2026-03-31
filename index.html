@@ -448,7 +448,7 @@ function dgSetLang(lg) {
   var cp = document.getElementById('contact-phone');
   if(cp){cp.textContent=t.ph; cp.href='tel:'+t.ph.replace(/\s/g,'');}
   sd('footer-phone',t.ph);
-  document.querySelectorAll('.dg-btn').forEach(function(b){ b.classList.remove('dg-active'); }); event && event.target && event.target.classList.add('dg-active');
+  document.querySelectorAll('.dg-btn').forEach(function(b){ b.classList.toggle('dg-active', b.textContent.trim() === ({el:'ΕΛ',en:'EN',tr:'TR'}[lg])); });
 }
 
 function dgSendForm() {

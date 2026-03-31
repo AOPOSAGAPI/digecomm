@@ -460,11 +460,16 @@ function dgSendForm() {
   var t=T[lang];
   if(!name||!email||!msg){fb.style.display='block';fb.style.color='#cc0000';fb.textContent=t.ferr;return;}
   var body='Από: '+name+' <'+email+'>\n\n'+msg;
-  window.location.href='mailto:info@digecomm.gr?subject='+encodeURIComponent(subj||'Επικοινωνία')+'&body='+encodeURIComponent(body);
+  var em='info'+'@'+'digecomm.gr'; window.location.href='mailto:'+em+'?subject='+encodeURIComponent(subj||'Επικοινωνία')+'&body='+encodeURIComponent(body);
   fb.style.display='block'; fb.style.color='#006600'; fb.textContent=t.fok;
 }
 
 document.addEventListener('DOMContentLoaded', function(){
+  var em = 'info' + '@' + 'digecomm.gr';
+  var ce = document.getElementById('contact-email');
+  if(ce){ ce.textContent = em; ce.href = 'mailto:' + em; }
+  var fe = document.getElementById('footer-email');
+  if(fe){ fe.textContent = em; }
   dgSetLang(localStorage.getItem('dg_lang')||'el');
 });
 </script>

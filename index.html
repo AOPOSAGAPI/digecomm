@@ -68,9 +68,9 @@
       <img src="digecomm logo transparent.png" alt="DIGECOMM" style="height:110px;width:auto;display:block;">
     </a>
     <div class="d-flex align-items-center">
-      <button class="dg-btn dg-active" data-lang="el">ΕΛ</button>
-      <button class="dg-btn" data-lang="en">EN</button>
-      <button class="dg-btn" data-lang="tr">TR</button>
+      <button class="dg-btn dg-active" onclick="dgSetLang('el')">ΕΛ</button>
+      <button class="dg-btn" onclick="dgSetLang('en')">EN</button>
+      <button class="dg-btn" onclick="dgSetLang('tr')">TR</button>
       <a href="tel:6948985340" id="nav-phone" class="fw-bold text-decoration-none ms-4" style="color:#003366;font-size:1.5rem;">📞 6948985340</a>
     </div>
   </div>
@@ -84,7 +84,7 @@
     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop');">
+    <div class="carousel-item active" style="background-image:url('technical.jpg');">
       <div class="slide-content">
         <span class="icon">🏗️</span>
         <h1 id="s1t">Τεχνικά Έργα</h1>
@@ -92,7 +92,7 @@
         <a href="tel:6948985340" id="s1b" class="btn btn-warning btn-lg px-5 fw-bold shadow">ΕΠΙΚΟΙΝΩΝΙΑ</a>
       </div>
     </div>
-    <div class="carousel-item" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop');">
+    <div class="carousel-item" style="background-image:url('cleaner.jpg');">
       <div class="slide-content">
         <span class="icon">🏢</span>
         <h1 id="s2t">Facility Management</h1>
@@ -100,7 +100,7 @@
         <a href="tel:6948985340" id="s2b" class="btn btn-warning btn-lg px-5 fw-bold shadow">ΕΠΙΚΟΙΝΩΝΙΑ</a>
       </div>
     </div>
-    <div class="carousel-item" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1350&q=80');">
+    <div class="carousel-item" style="background-image:url('call_center.jpg');">
       <div class="slide-content">
         <span class="icon">📞</span>
         <h1 id="s3t">Business Support</h1>
@@ -448,7 +448,7 @@ function dgSetLang(lg) {
   var cp = document.getElementById('contact-phone');
   if(cp){cp.textContent=t.ph; cp.href='tel:'+t.ph.replace(/\s/g,'');}
   sd('footer-phone',t.ph);
-  document.querySelectorAll('.dg-btn').forEach(function(b){ b.classList.toggle('dg-active', b.getAttribute('data-lang')===lg); });
+  document.querySelectorAll('.dg-btn').forEach(function(b){ b.classList.remove('dg-active'); }); event && event.target && event.target.classList.add('dg-active');
 }
 
 function dgSendForm() {

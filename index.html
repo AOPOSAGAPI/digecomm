@@ -290,6 +290,7 @@
 // Translation data
 const translations = {
     el: {
+        "phone": "📞 +30 694 898 5340",
         "page_title": "DIGECOMM IKE | Τεχνικές Υπηρεσίες",
         "hero_tagline_tech": "Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες",
         "hero_tagline_business": "Εξειδικευμένο προσωπικό για την υποστήριξη των διαδικασιών σας",
@@ -342,6 +343,7 @@ const translations = {
         "inclusive_comm_text": "Ο Γιώργος μιλά την Ελληνική Νοηματική Γλώσσα (ΕΝΓ), διασφαλίζοντας την πρόσβαση σε όλους."
     },
     en: {
+        "phone": "📞 +30 694 898 5340",
         "page_title": "DIGECOMM IKE | Technical Services",
         "hero_tagline_tech": "Innovation & Reliability in Technical Services",
         "hero_tagline_business": "Specialized personnel for business support",
@@ -394,6 +396,7 @@ const translations = {
         "inclusive_comm_text": "George is fluent in Greek Sign Language (GSL), ensuring our services are accessible to everyone."
     },
     tr: {
+        "phone": "📞 +30 693 3061 106",
         "page_title": "DIGECOMM IKE | Teknik Hizmetler",
         "hero_tagline_tech": "Teknik Hizmetlerde Yenilik",
         "hero_tagline_business": "Süreç desteği için uzman personel",
@@ -451,20 +454,27 @@ function updateContent(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = translations[lang][key];
-            } else {
-                el.innerHTML = translations[lang][key];
+            // Αλλάζει το κείμενο
+            el.innerHTML = translations[lang][key];
+
+            // Ειδική ρύθμιση για το τηλέφωνο: αλλάζει και το link για κλήση
+            if (key === 'phone') {
+                const cleanNumber = translations[lang][key].replace('📞 ', '').replace(/\s/g, '');
+                el.setAttribute('href', 'tel:' + cleanNumber);
             }
         }
     });
-    document.title = translations[lang].page_title;
+
+    // Αλλάζει τον τίτλο στο tab του browser
+    if (translations[lang].page_title) {
+        document.title = translations[lang].page_title;
+    }
     
+    // Αλλάζει το χρώμα στα κουμπάκια ΕΛ/EN/TR
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', function() {

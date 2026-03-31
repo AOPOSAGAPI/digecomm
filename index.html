@@ -3,88 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">DIGECOMM IKE</title>
+    <title data-i18n="page_title">DIGECOMM IKE | Τεχνικές Υπηρεσίες</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        :root { --main-blue: #003366; }
+        :root { --main-blue: #003366; --accent-orange: #ff6600; }
         .navbar { background: white !important; border-bottom: 3px solid var(--main-blue); padding: 10px 0; }
-        .carousel-item { height: 600px; background-size: cover; background-position: center; }
-        .lang-btn { background: none; border: 2px solid var(--main-blue); color: var(--main-blue); padding: 5px 10px; cursor: pointer; font-weight: bold; border-radius: 5px; }
+        .carousel-item { height: 600px; min-height: 450px; background-size: cover; background-position: center; }
+        .lang-btn { background: none; border: 2px solid var(--main-blue); color: var(--main-blue); padding: 6px 12px; margin: 0 3px; cursor: pointer; font-weight: bold; border-radius: 5px; transition: 0.3s; }
         .lang-btn.active { background: var(--main-blue); color: white; }
-        .carousel-caption-custom { background: rgba(0, 51, 102, 0.7); padding: 30px; border-radius: 15px; }
+        .video-box { width: 280px; margin: 0 auto; position: relative; padding-bottom: 497px; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .service-card { border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px; transition: 0.3s; }
+        .carousel-caption-bg { background: rgba(0, 51, 102, 0.65); padding: 40px; border-radius: 20px; backdrop-filter: blur(5px); }
     </style>
 </head>
 <body>
 
 <nav class="navbar sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="#"><img src="digecomm logo transparent.png" style="height: 70px;"></a>
+        <a class="navbar-brand" href="#">
+            <img src="digecomm logo transparent.png" alt="DIGECOMM" style="height: 85px;">
+        </a>
         <div class="d-flex align-items-center">
             <div class="lang-selector me-3">
                 <button class="lang-btn active" data-lang="el">ΕΛ</button>
                 <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="tr">TR</button>
             </div>
-            <a href="tel:+306948985340" id="nav-phone" data-i18n="phone" class="fw-bold text-decoration-none" style="color: #003366;">📞 +30 694 898 5340</a>
+            <a href="tel:+306948985340" id="nav-phone" data-i18n="phone" class="fw-bold text-decoration-none d-none d-lg-block" style="color: #003366; font-size: 1.5rem;">📞 +30 694 898 5340</a>
         </div>
     </div>
 </nav>
 
-<div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
     <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('technical.jpg');">
+        
+        <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('technical.jpg');">
             <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
-                <div class="carousel-caption-custom">
-                    <h1 class="display-3 fw-bold">DIGECOMM IKE</h1>
-                    <p class="lead fs-2" data-i18n="hero_tagline_tech">Τεχνικές Υπηρεσίες & Ανακαινίσεις</p>
-                    <a href="tel:+306948985340" class="btn btn-warning btn-lg fw-bold" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                <div class="carousel-caption-bg">
+                    <h1 class="display-3 fw-bold mb-3">DIGECOMM IKE</h1>
+                    <p class="lead fs-2 mb-4" data-i18n="hero_tagline_tech">Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες</p>
+                    <a href="tel:+306948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                 </div>
             </div>
         </div>
-        <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('call_center.jpg');">
+
+        <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('call_center.jpg');">
             <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
-                <div class="carousel-caption-custom">
-                    <h2 class="display-3 fw-bold">Business Support</h2>
-                    <p class="lead fs-2" data-i18n="hero_tagline_business">Υποστήριξη Επιχειρησιακών Διαδικασιών</p>
+                <div class="carousel-caption-bg">
+                    <h2 class="display-3 fw-bold mb-3">Business Support</h2>
+                    <p class="lead fs-2 mb-4" data-i18n="hero_tagline_business">Εξειδικευμένο προσωπικό για την υποστήριξη των διαδικασιών σας</p>
+                    <a href="tel:+306948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                 </div>
             </div>
         </div>
-        <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('cleaner.jpg');">
+
+        <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('cleaner.jpg');">
             <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
-                <div class="carousel-caption-custom">
-                    <h2 class="display-3 fw-bold">Facility Management</h2>
-                    <p class="lead fs-2" data-i18n="hero_tagline_facility">Ολοκληρωμένη Διαχείριση Εγκαταστάσεων</p>
+                <div class="carousel-caption-bg">
+                    <h2 class="display-3 fw-bold mb-3">Facility Management</h2>
+                    <p class="lead fs-2 mb-4" data-i18n="hero_tagline_facility">Έμφαση στη λεπτομέρεια και υψηλή παραγωγικότητα</p>
+                    <a href="tel:+306948985340" class="btn btn-warning btn-lg px-5 fw-bold shadow" data-i18n="contact_button">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                 </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+</div>
+
+<section id="about" class="py-5 bg-white">
+    <div class="container text-center">
+        <h2 class="fw-bold" style="color: #003366;" data-i18n="about_us_title">Ποιοι Είμαστε</h2>
+        <hr class="mx-auto" style="width: 80px; height: 4px; background-color: #ff6600; border: none; opacity: 1;">
+        <p class="fs-5 text-dark mt-4 mx-auto" style="max-width: 900px;" data-i18n="about_us_description">
+            Η DIGECOMM IKE καθοδηγείται από τον Γιώργο Γκόλια, συνδυάζοντας την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5" style="color: #003366;" data-i18n="recent_projects_title">Πρόσφατα Έργα</h2>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4"><img src="kitchen-stairs.jpg" class="img-fluid rounded shadow-lg" alt="Loft"></div>
+            <div class="col-lg-6 px-lg-5">
+                <h3 class="fw-bold" style="color: #003366;" data-i18n="loft_renovation_title">Ολική Ανακατασκευή Loft</h3>
+                <p class="text-muted fs-5" data-i18n="loft_renovation_description">Μετατρέψαμε έναν παλιό χώρο σε ένα σύγχρονο, πολυτελές κατάλυμα.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5 pt-5 border-top">
+            <div class="col-lg-6 order-lg-2 mb-4 text-center">
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/p_p7L-2Xw_k" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1 px-lg-5 text-center text-lg-start">
+                <h3 class="fw-bold" style="color: #003366;" data-i18n="industrial_paving_title">Πλακόστρωση Βιομηχανικού Κτιρίου</h3>
+                <p class="text-muted fs-5" data-i18n="industrial_paving_description">Εξειδικευμένη πλακόστρωση μεγάλης επιφάνειας σε βιομηχανικό χώρο.</p>
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-</div>
+</section>
+
+<footer class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <p class="mb-2">📍 <span data-i18n="address">Συντ. Δαβάκη 58, Καλλιθέα</span></p>
+        <p class="mb-4">📞 <a href="tel:+306948985340" data-i18n="phone" class="text-white text-decoration-none">+30 694 898 5340</a></p>
+        <p class="small opacity-50" data-i18n="copyright">&copy; 2026 DIGECOMM IKE</p>
+    </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 const translations = {
     el: {
+        "page_title": "DIGECOMM IKE | Τεχνικές Υπηρεσίες",
         "phone": "📞 +30 694 898 5340",
-        "hero_tagline_tech": "Τεχνικές Υπηρεσίες & Ανακαινίσεις",
-        "hero_tagline_business": "Υποστήριξη Επιχειρησιακών Διαδικασιών",
-        "hero_tagline_facility": "Ολοκληρωμένη Διαχείριση Εγκαταστάσεων",
-        "contact_button": "ΕΠΙΚΟΙΝΩΝΙΑ"
+        "hero_tagline_tech": "Καινοτομία & Αξιοπιστία στις Τεχνικές Υπηρεσίες",
+        "hero_tagline_business": "Εξειδικευμένο προσωπικό για την υποστήριξη των διαδικασιών σας",
+        "hero_tagline_facility": "Έμφαση στη λεπτομέρεια και υψηλή παραγωγικότητα",
+        "contact_button": "ΕΠΙΚΟΙΝΩΝΙΑ",
+        "about_us_title": "Ποιοι Είμαστε",
+        "about_us_description": "Η DIGECOMM IKE καθοδηγείται από τον Γιώργο Γκόλια, συνδυάζοντας την τεχνική ακρίβεια με την ανθρωποκεντρική προσέγγιση.",
+        "recent_projects_title": "Πρόσφατα Έργα",
+        "loft_renovation_title": "Ολική Ανακατασκευή Loft",
+        "loft_renovation_description": "Μετατρέψαμε έναν παλιό χώρο σε ένα σύγχρονο, πολυτελές κατάλυμα.",
+        "industrial_paving_title": "Πλακόστρωση Βιομηχανικού Κτιρίου",
+        "industrial_paving_description": "Εξειδικευμένη πλακόστρωση μεγάλης επιφάνειας σε βιομηχανικό χώρο.",
+        "address": "Συντ. Δαβάκη 58, Καλλιθέα",
+        "copyright": "&copy; 2026 DIGECOMM IKE"
     },
     en: {
+        "page_title": "DIGECOMM IKE | Technical Services",
         "phone": "📞 +30 694 898 5340",
-        "hero_tagline_tech": "Technical Services & Renovations",
-        "hero_tagline_business": "Business Process Support",
-        "hero_tagline_facility": "Complete Facility Management",
-        "contact_button": "CONTACT"
+        "hero_tagline_tech": "Innovation & Reliability in Technical Services",
+        "hero_tagline_business": "Specialized personnel for business support",
+        "hero_tagline_facility": "Focus on detail and high productivity",
+        "contact_button": "CONTACT",
+        "about_us_title": "About Us",
+        "about_us_description": "DIGECOMM IKE is led by George Golias, combining technical precision with a human-centric approach.",
+        "recent_projects_title": "Recent Projects",
+        "loft_renovation_title": "Total Loft Reconstruction",
+        "loft_renovation_description": "We transformed an old space into a modern, luxury accommodation.",
+        "industrial_paving_title": "Industrial Building Paving",
+        "industrial_paving_description": "Specialized large-scale paving in an industrial facility.",
+        "address": "58 Synt. Davaki, Kallithea",
+        "copyright": "&copy; 2026 DIGECOMM IKE"
     },
     tr: {
+        "page_title": "DIGECOMM IKE | Teknik Hizmetler",
         "phone": "📞 +30 693 3061 106",
-        "hero_tagline_tech": "Teknik Hizmetler και Yenileme",
-        "hero_tagline_business": "İş Süreçleri Desteği",
-        "hero_tagline_facility": "Tesis Yönetimi",
-        "contact_button": "İLETİŞİM"
+        "hero_tagline_tech": "Teknik Hizmetlerde Yenilik και Güven",
+        "hero_tagline_business": "Süreç desteği için uzman personel",
+        "hero_tagline_facility": "Detaylara odaklanma και yüksek verimlilik",
+        "contact_button": "İLETİŞİM",
+        "about_us_title": "Biz Kimiz",
+        "about_us_description": "DIGECOMM IKE, George Golias tarafından yönetilmektedir.",
+        "recent_projects_title": "Son Projeler",
+        "loft_renovation_title": "Loft Yenileme",
+        "loft_renovation_description": "Eski bir alanı modern bir birime dönüştürdük.",
+        "industrial_paving_title": "Endüstriyel Bina Döşeme",
+        "industrial_paving_description": "Endüstriyel bir tesiste geniş ölçekli özel döşeme.",
+        "address": "Synt. Davaki 58, Kallithea",
+        "copyright": "&copy; 2026 DIGECOMM IKE"
     }
 };
 

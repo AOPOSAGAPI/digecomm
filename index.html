@@ -11,19 +11,17 @@
         .carousel-item { height: 600px; background-size: cover; background-position: center; }
         .lang-btn { background: none; border: 2px solid var(--main-blue); color: var(--main-blue); padding: 8px 12px; margin: 0 5px; cursor: pointer; font-weight: bold; border-radius: 5px; }
         .lang-btn.active { background: var(--main-blue); color: white; }
-        .service-card { border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 10px; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); }
         .video-container { position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); width: 260px; margin: 0 auto; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .video-box-small { position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .video-box-small iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
 
 <nav class="navbar sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="#">
-            <img src="digecomm logo transparent.png" alt="DIGECOMM" style="height: 100px;">
-        </a>
+        <a class="navbar-brand" href="#"><img src="digecomm logo transparent.png" alt="DIGECOMM" style="height: 100px;"></a>
         <div class="d-flex align-items-center">
             <div class="lang-selector">
                 <button class="lang-btn active" data-lang="el">ΕΛ</button>
@@ -70,7 +68,7 @@
 <section id="about-us" class="py-5 bg-white">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5 mb-4">
+            <div class="col-lg-5 mb-4 text-center">
                 <img src="metal-stairs.jpg" class="img-fluid rounded shadow-lg" alt="Bio - Metal Stairs">
             </div>
             <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
@@ -98,7 +96,43 @@
     </div>
 </section>
 
-<section class="py-5 bg-light">
+<section id="loft-project" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <img src="kitchen-stairs.jpg" alt="Loft" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6 mb-4 px-lg-5">
+                <h2 class="fw-bold mb-3" style="color: #003366;" data-i18n="loft_renovation_title">Ολική Ανακατασκευή Loft (AirBnb)</h2>
+                <p class="text-muted fs-5" data-i18n="loft_renovation_description">Μετατρέψαμε έναν παλιό χώρο σε ένα σύγχρονο κατάλυμα. Αναλάβαμε όλο το φάσμα των εργασιών.</p>
+                
+                <div class="mt-4">
+                    <h5 class="fw-bold mb-3" style="color: #003366;" data-i18n="project_evolution_video">Η Εξέλιξη του Έργου:</h5>
+                    <div class="row g-2">
+                        <div class="col-3">
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/eWGEiKyXQyw" allowfullscreen></iframe></div>
+                            <p class="small text-center mt-1" data-i18n="before">Πριν</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/wlCMACHGf6k" allowfullscreen></iframe></div>
+                            <p class="small text-center mt-1" data-i18n="works">Εργασίες 1</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/nM0eA53KKos" allowfullscreen></iframe></div>
+                            <p class="small text-center mt-1" data-i18n="works_2">Εργασίες 2</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="video-box-small"><iframe src="https://www.youtube.com/embed/cQKPYtPriaA" allowfullscreen></iframe></div>
+                            <p class="small text-center mt-1 fw-bold text-success" data-i18n="after">Μετά</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -116,7 +150,7 @@
     </div>
 </section>
 
-<section id="contact-form-section" class="py-5">
+<section id="contact-form-section" class="py-5 bg-light">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -167,14 +201,15 @@ const translations = {
         "social_vision_text": "Ιδρυτής της ΑΜΚΕ «Α όπως Αγάπη», με πολυετή πορεία στον εθελοντισμό.",
         "inclusive_comm_title": "Συμπερίληψη",
         "inclusive_comm_text": "Γνώστης της Ελληνικής Νοηματικής Γλώσσας (ΕΝΓ).",
+        "loft_renovation_title": "Ολική Ανακατασκευή Loft (AirBnb)",
+        "loft_renovation_description": "Μετατρέψαμε έναν παλιό χώρο σε ένα σύγχρονο κατάλυμα. Αναλάβαμε όλο το φάσμα των εργασιών.",
+        "project_evolution_video": "Η Εξέλιξη του Έργου:",
+        "before": "Πριν", "works": "Εργασίες 1", "works_2": "Εργασίες 2", "after": "Μετά",
         "stray_animal_care_title": "Φροντίδα για τα Αδέσποτα",
         "tzan_contribution": "Ο Τζαν ανέλαβε εθελοντικά την πλήρη ανακατασκευή της μεταλλικής σκάλας.",
         "our_work_is_our_art": "Η δουλειά μας είναι η τέχνη μας.",
         "contact_title": "Επικοινωνήστε μαζί μας",
-        "form_name": "Ονοματεπώνυμο",
-        "form_email": "Email",
-        "form_message": "Μήνυμα",
-        "form_button": "Αποστολή Μηνύματος",
+        "form_name": "Ονοματεπώνυμο", "form_email": "Email", "form_message": "Μήνυμα", "form_button": "Αποστολή Μηνύματος",
         "social_contribution_badge": "Κοινωνική Προσφορά"
     },
     en: {
@@ -184,19 +219,20 @@ const translations = {
         "hero_tagline_facility": "Facility Management",
         "contact_button": "CONTACT",
         "about_us_title": "About Us",
-        "about_us_description": "DIGECOMM IKE is led by George Golias. With a background in Math and an MBA, George combines technical precision with a human-centric approach.",
+        "about_us_description": "DIGECOMM IKE is led by George Golias, combining technical precision with a human-centric approach.",
         "social_vision_title": "Social Vision",
-        "social_vision_text": "Founder of the NGO 'A for Agapi', dedicated to social contribution.",
+        "social_vision_text": "Founder of 'A for Agapi' NGO, dedicated to social contribution.",
         "inclusive_comm_title": "Inclusion",
         "inclusive_comm_text": "Fluent in Greek Sign Language (GSL).",
+        "loft_renovation_title": "Total Loft Reconstruction (AirBnb)",
+        "loft_renovation_description": "We transformed an old space into a modern apartment.",
+        "project_evolution_video": "Project Evolution:",
+        "before": "Before", "works": "Work 1", "works_2": "Work 2", "after": "After",
         "stray_animal_care_title": "Stray Animal Care",
         "tzan_contribution": "Tzan volunteered for the reconstruction of the metal staircase.",
         "our_work_is_our_art": "Our work is our art.",
         "contact_title": "Contact Us",
-        "form_name": "Full Name",
-        "form_email": "Email",
-        "form_message": "Message",
-        "form_button": "Send Message",
+        "form_name": "Full Name", "form_email": "Email", "form_message": "Message", "form_button": "Send Message",
         "social_contribution_badge": "Social Contribution"
     },
     tr: {
@@ -206,19 +242,20 @@ const translations = {
         "hero_tagline_facility": "Tesis Yönetimi",
         "contact_button": "İLETİŞİM",
         "about_us_title": "Biz Kimiz",
-        "about_us_description": "DIGECOMM IKE, George Golias tarafından yönetilmektedir. George, teknik hassasiyeti insan odaklı bir yaklaşımla birleştiriyor.",
+        "about_us_description": "DIGECOMM IKE, George Golias tarafından yönetilmektedir.",
         "social_vision_title": "Sosyal Vizyon",
         "social_vision_text": "'A for Agapi' STK'sının kurucusu.",
         "inclusive_comm_title": "Kapsayıcılık",
         "inclusive_comm_text": "Yunan İşaret Dili (GSL) bilmektedir.",
+        "loft_renovation_title": "Komple Loft Yenileme (AirBnb)",
+        "loft_renovation_description": "Eski bir alanı modern bir konaklama birimine dönüştürdük.",
+        "project_evolution_video": "Proje Gelişimi:",
+        "before": "Önce", "works": "Çalışma 1", "works_2": "Çalışma 2", "after": "Sonra",
         "stray_animal_care_title": "Hayvan Bakımı",
         "tzan_contribution": "Tzan, metal merdivenin rekonstrüksiyonu için gönüllü oldu.",
         "our_work_is_our_art": "İşimiz sanatımızdır.",
         "contact_title": "Bize Ulaşın",
-        "form_name": "Ad Soyad",
-        "form_email": "E-posta",
-        "form_message": "Mesaj",
-        "form_button": "Mesaj Gönder",
+        "form_name": "Ad Soyad", "form_email": "E-posta", "form_message": "Mesaj", "form_button": "Mesaj Gönder",
         "social_contribution_badge": "Sosyal Katkı"
     }
 };
@@ -234,9 +271,7 @@ function updateContent(lang) {
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        updateContent(this.getAttribute('data-lang'));
-    });
+    btn.addEventListener('click', function() { updateContent(this.getAttribute('data-lang')); });
 });
 </script>
 </body>

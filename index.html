@@ -467,7 +467,7 @@ function dgSendForm() {
 document.addEventListener('DOMContentLoaded', function(){
   var em=String.fromCharCode(105,110,102,111,64,100,105,103,101,99,111,109,109,46,103,114);
   var ce = document.getElementById('contact-email');
-  if(ce){ ce.textContent = em; ce.href = 'mailto:' + em; }
+  if(ce){ ce.textContent = em; }
   var fe = document.getElementById('footer-email');
   if(fe){ fe.textContent = em; }
   dgSetLang(localStorage.getItem('dg_lang')||'el');
